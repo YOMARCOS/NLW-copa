@@ -1,49 +1,40 @@
-
 * {
   margin: 0;
   padding: 0;
- 
+  box-sizing: border-box;
 }
 
 :root {
   --card-title-border-color: #746615;
   --card-color-primary: #f7dd43;
-  --card-bg-color: #1a191d;
-  --bg: url(./assets/bg.svg);
-  
-}
-body.blue {
-  --card-title-border-color: #3c89e7;
-  --card-color-primary: #9c9705c7;
-  --card-bg-color: #171431eb;
+  --card-bg-color: #071a07;
   --bg: url(./assets/bg-yellow.svg);
 }
 
+body.blue {
+  --card-title-border-color: #338af3;
+  --card-color-primary: #338af3;
+  --card-bg-color: #202024;
+  --bg: url(./assets/bg-blue.svg);
+}
 
 body.green {
   --card-title-border-color: #047c3f;
   --card-color-primary: #047c3f;
-  --card-bg-color: #122c17;
-  --bg: url(./assets/bg.svg);
+  --card-bg-color: #1a1f1b;
+  --bg: url(./assets/bg-green.svg);
 }
+
 ul {
   list-style: none;
 }
 
 body {
-  background-color: #1d1919;
-background-image:  var(--bg);
-background-position: center;
-width: 100%;
-  height: 100vh;
-background-repeat:  no-repeat;
-background-size: cover;
-
+  background: #121214 var(--bg) no-repeat top center/cover;
 }
 
 body * {
-  font-family: "Roboto", sans-serif; 
-
+  font-family: "Roboto", sans-serif;
 }
 
 #app {
@@ -53,36 +44,29 @@ body * {
 }
 
 header {
-  margin-bottom: 180px;
+  margin-bottom: 63px;
   text-align: center;
 }
+
+  
+
 
 #cards {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 52px;
-  justify-content: center;
-  
-  
-}.card:hover{
-  padding: 32px 23px;
-transform: scale(1.05);
-background: var(--card-bg-color);
- border-bottom:3px solid rgb(85, 85, 193);
- border-radius: 6px;
+  flex-direction: column;
+  gap: 32px;
+ justify-content: center;
 }
+
 .card {
- 
+  padding: 32px 23px;
   text-align: center;
-  justify-content: center;
-  
- 
- 
-
+} .card:hover{
+  background: var(--card-bg-color);
+  border-bottom: 2px solid var(--card-color-primary);
+  border-radius: 6px;
 }
-
-.card h2 {
+ .card h2 {
   display: flex;
   gap: 16px;
   justify-content: center;
@@ -98,7 +82,6 @@ background: var(--card-bg-color);
 
   color: #f7dd43;
 }
-
 .card h2 span {
   color: #e1e1e6;
   font-size: 14px;
@@ -126,7 +109,7 @@ background: var(--card-bg-color);
 
 .card ul li strong {
   font-weight: 900;
-  font-size: 30px;
+  font-size: 36px;
   line-height: 125%;
 
   color: #e1e1e6;
@@ -164,9 +147,6 @@ background: var(--card-bg-color);
   #cards {
     max-width: 670px;
     flex-direction: row;
-   
+    flex-wrap: wrap;
   }
-}
-main{
-  display: flex;
 }
